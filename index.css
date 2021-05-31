@@ -1,6 +1,13 @@
-body {
-  margin: 0%;
-  padding: 0%;
+* {
+  margin: 0px;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: fantasy;
+  font-weight: bold !important;
 }
 .first-slide {
   background-color: #423d46;
@@ -10,31 +17,40 @@ body {
 .first-slide-content-one {
   overflow: hidden;
   text-align: center;
-  padding: 4em;
-  position: absolute;
+  padding: 3em;
+  padding-top: 2em;
+  position: relative;
+  /* width: 25%;
+  height: 20%; */
   width: auto;
+  max-width: 350px;
   height: auto;
   left: 50%;
   top: 45%;
   transform: translate(-50%, -45%);
-  animation: firstSlideOver 500ms ease 2000ms 1 forwards;
+  animation: firstSlideOver 500ms ease 3000ms 1 forwards;
 }
 
 @keyframes firstSlideOver {
   from {
     opacity: 1;
     transform: translate(-50%, -45%) rotate(0deg);
+    background: none;
+    overflow: hidden;
   }
   to {
     opacity: 0;
     transform: translate(-50%, -45%) rotate(-90deg);
+    background: #98def3;
+    visibility: hidden;
   }
 }
 
-.left {
-  font-size: 6em;
+.hone {
+  font-size: 4em;
+  margin: 12px;
   color: antiquewhite;
-  animation: leftText 500ms ease 0s 1;
+  animation: leftText 1000ms ease 0s 1;
 }
 @keyframes leftText {
   from {
@@ -47,12 +63,11 @@ body {
   }
 }
 
-.right {
-  font-size: 4em;
+.htwo {
+  font-size: 3em;
   color: beige;
   position: relative;
-  animation: rightText 500ms ease 0s 1;
-  top: -50px;
+  animation: rightText 1000ms ease 0s 1;
 }
 @keyframes rightText {
   from {
@@ -63,6 +78,72 @@ body {
   to {
     opacity: 1;
     transform: scale(1);
-    top: -50px;
+    top: 0;
+  }
+}
+
+.top {
+  position: absolute;
+  top: 0;
+  background-color: aqua;
+  display: inline-block;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  opacity: 0;
+  animation: topLine 500ms ease 1000ms forwards;
+}
+.bottom {
+  position: absolute;
+  bottom: 0;
+  background-color: aqua;
+  display: inline-block;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  opacity: 0;
+  animation: topLine 500ms ease 2000ms 1 forwards;
+}
+@keyframes topLine {
+  from {
+    width: 0%;
+    opacity: 0;
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+.right {
+  position: absolute;
+  background-color: aqua;
+  display: inline-block;
+  right: 0;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  opacity: 0;
+  animation: rightLine 500ms ease 1500ms 1 forwards;
+}
+.left {
+  position: absolute;
+  background-color: aqua;
+  display: inline-block;
+  left: 0;
+  bottom: 0;
+  width: 2px;
+  opacity: 0;
+  height: 100%;
+  animation: rightLine 500ms ease 2500ms 1 forwards;
+}
+@keyframes rightLine {
+  from {
+    height: 0%;
+    opacity: 0;
+  }
+  to {
+    height: 100%;
+    opacity: 1;
   }
 }
