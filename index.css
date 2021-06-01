@@ -147,3 +147,156 @@ html {
     opacity: 1;
   }
 }
+
+/*first slide content two*/
+.first-slide-content-two {
+  text-align: center;
+  padding: 3em;
+  padding-top: 2em;
+  position: absolute;
+  width: auto;
+  max-width: 350px;
+  height: auto;
+  overflow: hidden;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -45%);
+  /* animation: secondSlideIn 500ms ease 5300ms 1 forwards; */
+}
+
+/* @keyframes secondSlideIn {
+  from {
+    overflow: hidden;
+  }
+  to {
+    visibility: hidden;
+  }
+} */
+
+.today {
+  font-size: 3em;
+  margin: 12px;
+  color: antiquewhite;
+  animation: today 500ms ease 3600ms 1 forwards;
+  visibility: hidden;
+}
+.is,
+.your {
+  font-size: 1.5em;
+  color: white;
+  visibility: hidden;
+}
+.is {
+  animation: is 300ms ease 4100ms 1 forwards;
+}
+.your {
+  animation: your 300ms ease 4100ms 1 forwards;
+}
+.special-day {
+  font-size: 4em;
+  margin: 12px;
+  color: antiquewhite;
+  visibility: hidden;
+  animation: special-day 700ms ease 4450ms 1 forwards;
+}
+@keyframes today {
+  from {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0) rotate(-45deg);
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+@keyframes is {
+  from {
+    visibility: hidden;
+    transform: scale(0) translateX(-7em);
+  }
+  to {
+    visibility: visible;
+    transform: scale(1) translateX(0);
+  }
+}
+
+@keyframes your {
+  from {
+    visibility: hidden;
+    transform: scale(0) translateX(7em);
+  }
+  to {
+    visibility: visible;
+    transform: scale(1) translateX(0);
+  }
+}
+@keyframes special-day {
+  0% {
+    transform: translateY(1200px) scale(0.5);
+    opacity: 0.7;
+    visibility: hidden;
+  }
+
+  60% {
+    transform: translateY(0px) scale(0.5);
+    opacity: 0.7;
+    visibility: visible;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.left-ballon {
+  position: absolute;
+  left: 0;
+  bottom: 20vh;
+  visibility: hidden;
+  animation: unhide 100ms ease 5150ms 1 forwards;
+}
+.right-ballon {
+  position: absolute;
+  right: 0;
+  bottom: 20vh;
+  visibility: hidden;
+  animation: unhide 100ms ease 5150ms 1 forwards;
+}
+
+@keyframes unhide {
+  from {
+    visibility: hidden;
+  }
+  to {
+    visibility: visible;
+  }
+}
+
+.second-slide {
+  background: url("./Star.png") blue;
+  visibility: hidden;
+  animation: secondSlideIn 1000ms ease 6000ms 1 forwards;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+@keyframes secondSlideIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+    visibility: hidden;
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+}
