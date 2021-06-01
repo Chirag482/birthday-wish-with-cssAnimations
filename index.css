@@ -276,6 +276,8 @@ html {
   }
 }
 
+/*seccond slide*/
+
 .second-slide {
   background: url("./Star.png") blue;
   visibility: hidden;
@@ -297,6 +299,165 @@ html {
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+}
+
+.top-image {
+  height: 20vh;
+  background: url("./cover.png") repeat;
+
+  animation: topImage 1000ms ease 6500ms 1 forwards;
+}
+@keyframes topImage {
+  from {
+    opacity: 0;
+    transform: translateX(-100vw);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.bottom-image {
+  height: 20vh;
+  background: url("./cover.png") repeat;
+  animation: bottomImage 1000ms ease 6500ms 1 forwards;
+}
+@keyframes bottomImage {
+  from {
+    opacity: 0;
+    transform: translateX(100vw);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.main-content {
+  height: 60vh;
+  padding-top: 20vh;
+  padding-bottom: 20vh;
+}
+
+.main {
+  height: 20vh;
+  background-color: cornsilk;
+  font-size: 6em;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  visibility: hidden;
+  color: rgb(255, 1, 1);
+  animation: divIn 500ms ease 7500ms 1 forwards;
+}
+@keyframes divIn {
+  from {
+    transform: translateX(-100vw);
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@media screen and (max-width: 900px) {
+  .main {
+    font-size: 4em;
+  }
+}
+@media screen and (max-width: 700px) {
+  .main {
+    font: 3em;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main {
+    font-size: 2.5em;
+  }
+}
+@media screen and (max-width: 500px) {
+  .main {
+    font-size: 2em;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.happy {
+  margin: 5vw;
+}
+
+.animateone {
+  animation: animate 500ms ease 8100ms 1 forwards;
+  visibility: hidden;
+}
+.animatetwo {
+  animation: animate 500ms ease 8600ms 1 forwards;
+  visibility: hidden;
+}
+.animatethree {
+  animation: animate 500ms ease 9100ms 1 forwards;
+  visibility: hidden;
+}
+.animatefour {
+  animation: animate 500ms ease 9600ms 1 forwards;
+  visibility: hidden;
+}
+.animatefive {
+  animation: animate 500ms ease 10100ms 1 forwards;
+  visibility: hidden;
+}
+.animatesix {
+  animation: animate 500ms ease 10600ms 1 forwards;
+  visibility: hidden;
+}
+.animateseven {
+  animation: animate 500ms ease 11100ms 1 forwards;
+  visibility: hidden;
+}
+.animateeight {
+  animation: animate 500ms ease 11600ms 1 forwards;
+  visibility: hidden;
+}
+.animatenine {
+  animation: animate 500ms ease 12100ms 1 forwards;
+  visibility: hidden;
+}
+.animateten {
+  animation: animate 500ms ease 12600ms 1 forwards;
+  visibility: hidden;
+}
+.animateeleven {
+  animation: animate 500ms ease 13100ms 1 forwards;
+  visibility: hidden;
+}
+.animatetwe {
+  animation: animate 500ms ease 13600ms 1 forwards;
+  visibility: hidden;
+}
+.animatethirteen {
+  animation: animate 500ms ease 14100ms 1 forwards;
+  visibility: hidden;
+}
+@keyframes animate {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  5% {
+    visibility: visible;
+  }
+  to {
+    opacity: 1;
     visibility: visible;
   }
 }
